@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>calculator</title>
+<style>
+  body{
+    overflow-x: scroll;
+    
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color:rgb(26, 0, 0);
+  height:15%; 
+  width:100%;
+  position:scroll;
+  top: 0px;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:#F8F8FF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  align-content:;
+  
+}
+
+li a:hover {
+  
+  
+  background-color:#696969;
+  color: white;
+}
+.sugg{
+  background-color: #DEB887;
+  height: 55%;
+  width:20%;
+  top:140px;
+  color: white;
+  position: absolute;
+  left: 1005px;
+}
+#suggestion{
+  overflow-y: : scroll;
+}
+.main{
+  
+  height:100%;
+  width: 100%;
+  background-color: white;
+  
+}
+.dice{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 270px;
+    left:80px;
+
+
+
+
+   
+  }
+  #di{
+    float: top;
+  }
+  .myclock{
+    
+    
+    font-size: 25px;
+    color:#F8F8FF;
+    position: absolute;
+    top: 15px;
+    left: 1090px;
+    font-family:Times New Roman;
+     height: 60px;
+    width: 250px;
+
+  }
+  .idea{
+    position: relative;
+    left:20px;
+    top: 20px;
+    overflow-y:scroll;
+  }
+  .footer{
+
+  }
+  #sticky-footer {
+  position: absolute;
+  top: 675px;
+  flex-shrink: none;
+  background-color:rgb(26, 0, 0);
+  text-align:center;
+  height: 80px;
+  border-radius: 5px;
+  color:white;
+  font-size: 30px;
+  width: 99%;
+}
+#button1{
+  
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 350px;
+  left:80px;
+  border-radius: 50%
+}
+#button2{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 80px;
+    left:480px;
+    border-radius: 50%;
+}
+#button3{
+   height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 350px;
+    left:820px;
+    border-radius: 50%;
+}
+#button1:hover{
+  opacity: 70%;
+  border-radius: 30%;
+
+ }
+#button2:hover{
+  opacity: 70%;
+  border-radius: 30%;
+}
+#button3:hover{
+  opacity: 70%;
+  border-radius: 30%;
+}
+#b1{
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ position: absolute;
+top:0px;
+left:0px;
+}
+#b2{
+
+width: 250px;
+height: 250px;
+border-radius: 50%;
+position: absolute;
+top:0px;
+left:0px;
+}
+#b3{
+   width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ position: absolute;
+top:0px;
+left:0px;
+}
+#calculator{
+  height: 520px;
+  width: 320px;
+  background-color: black;
+  margin: 0 auto;
+  top: 130px;
+  left: 450px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#result{
+  height: 120px;
+  color: white;
+  font-size: 30px;
+}
+#keyboard{
+  height: 420px;
+}
+.operator,.numbers,.operators{
+  border-radius: 50%;
+  border-width: 0;
+  height: 50px;
+  width: 50px;
+  float:left;
+  font-size: 30px;
+  margin: 15px;
+}
+.operator{
+  background-color: #FF8C00;
+  color: white;
+}
+.operators{
+  background-color: #A9A9A9;
+  color:black;
+}
+.numbers{
+  color: white;
+  background-color:#696969;
+}
+button:nth-child(17){
+  width: 130px;
+  height: 60px;
+}
+#ans{
+  height: 120px;
+  position: relative;
+  width: 90%;
+  color: white;
+  background-color: black;
+  opacity: 100%;
+  text-align: left;
+  border-radius: 5px;
+  border-width: 0;
+  font-size: 30px;
+}
+img{
+  opacity: 0.5;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<ul>
+  
+  <li><a class="active" href="main.html"><i style="font-size:24px" class="fa">&#xf015</i><br>HOME</a></li>
+  <li><a href="sigin.html"><i class="fa fa-sign-in"></i><br>SIGN IN</a></li>
+  <li><a href="#about"><i class='fas fa-info-circle'></i><br>ABOUT US</a></li>
+  <li>&nbsp;<div id="clock" class="myclock" onload="myfunc()">
+    
+  </div></li>
+</ul>
+<img src="https://media.istockphoto.com/photos/math-physics-formulas-picture-id925167552" height="600px" width="100%">
+
+<div class="main">
+  
+  
+<div id="calculator">
+    <div id="result">
+      <input type="text" id="ans">
+    </div>
+    <div id="keyboard">
+      <button class="operators"  onclick="clr()">AC</button>
+      <button class="operators" onclick="dis('%')">%</button>
+      <button class="operators" onclick="back()"><-</button>
+      <button class="operator" onclick="dis('/')">/</button>
+      <button class="numbers" onclick="dis('7')">7</button>
+      <button class="numbers" onclick="dis('8')">8</button>
+      <button class="numbers" onclick="dis('9')">9</button>
+      <button class="operator" onclick="dis('*')">*</button>
+      <button class="numbers" onclick="dis('4')">4</button>
+      <button class="numbers" onclick="dis('5')">5</button>
+      <button class="numbers" onclick="dis('6')">6</button>
+      <button class="operator" onclick="dis('-')">-</button>
+      <button class="numbers" onclick="dis('1')">1</button>
+      <button class="numbers" onclick="dis('2')">2</button>
+      <button class="numbers" onclick="dis('3')">3</button>
+      <button class="operator" onclick="dis('+')">+</button>
+      <button class="numbers" onclick="dis('0')">0</button>
+      <button class="numbers">.</button>
+      <button class="operator" onclick="solve()">=</button>
+    </div>
+  </div>
+</div>
+
+  
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Chitkara Developers </small><br>
+      <i style="font-size:24px" class="fa">&#xf230;</i>
+      <i style="font-size:24px" class="fa">&#xf09b;</i>
+      <i style="font-size:24px" class="fa">&#xf16d;</i>
+    </div>
+  </footer>
+
+<script>
+  var c=0;
+   function dis(val){
+        var x=val;
+        document.getElementById("ans").value+=x;
+        
+
+  }
+  function solve(){
+    var x=document.getElementById("ans").value;
+    var y=eval(x);
+    document.getElementById("ans").value=y;
+  }
+  function sqrt(){
+    var x=document.getElementById("ans").value;
+    var y=eval(x);
+    var z=Math.sqrt(y);
+    document.getElementById("ans").value=z;
+  }
+  function clr()
+  {
+    var z=document.getElementById("ans").value;
+    z="";
+    document.getElementById("ans").value=z;
+  }
+  function back()
+  {
+    var z=document.getElementById("ans").value;
+    if(z>0)
+      z=Math.floor(z/10);
+    else if(z==0)
+      z="";
+    else
+      z=Math.ceil(z/10);
+    document.getElementById("ans").value=z;
+  }
+</script>
+</script>
+</body>
+</html>
+

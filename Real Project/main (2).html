@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>project</title>
+<style>
+  body{
+    overflow-x: scroll;
+    
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color:rgb(26, 0, 0);
+  height:15%; 
+  width:100%;
+  position:scroll;
+  top: 0px;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:#F8F8FF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  align-content:;
+  
+}
+
+li a:hover {
+  
+  
+  background-color:#696969;
+  color: white;
+}
+.sugg{
+  background-color: #DEB887;
+  height: 55%;
+  width:20%;
+  top:140px;
+  color: white;
+  position: absolute;
+  left: 1005px;
+}
+#suggestion{
+  overflow-y: : scroll;
+}
+.main{
+  
+  height:100%;
+  width: 100%;
+  background-color: white;
+  
+}
+.dice{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 270px;
+    left:80px;
+
+
+
+
+   
+  }
+  #di{
+    float: top;
+  }
+  .myclock{
+    
+    
+    font-size: 25px;
+    color:#F8F8FF;
+    position: absolute;
+    top: 15px;
+    left: 1090px;
+    font-family:Times New Roman;
+     height: 60px;
+    width: 250px;
+
+  }
+  .idea{
+    position: relative;
+    left:20px;
+    top: 20px;
+    overflow-y:scroll;
+  }
+  .footer{
+
+  }
+  #sticky-footer {
+  position: absolute;
+  top: 675px;
+  flex-shrink: none;
+  background-color:rgb(26, 0, 0);
+  text-align:center;
+  height: 120px;
+  border-radius: 5px;
+  color:white;
+  font-size: 30px;
+  width: 99%;
+}
+#button1{
+  
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 350px;
+  left:80px;
+  border-radius: 50%
+}
+#button2{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 80px;
+    left:480px;
+    border-radius: 50%;
+}
+#button3{
+   height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 350px;
+    left:820px;
+    border-radius: 50%;
+}
+#button1:hover{
+  opacity: 70%;
+  border-radius: 30%;
+
+ }
+#button2:hover{
+  opacity: 70%;
+  border-radius: 30%;
+}
+#button3:hover{
+  opacity: 70%;
+  border-radius: 30%;
+}
+#b1{
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ position: absolute;
+top:0px;
+left:0px;
+}
+#b2{
+
+width: 250px;
+height: 250px;
+border-radius: 50%;
+position: absolute;
+top:0px;
+left:0px;
+}
+#b3{
+   width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ position: absolute;
+top:0px;
+left:0px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<ul>
+  
+  <li><a class="active" href="main.html"><i style="font-size:24px" class="fa">&#xf015</i><br>HOME</a></li>
+  <li><a href="sigin.html"><i class="fa fa-sign-in"></i><br>SIGN IN</a></li>
+  <li><a href="#sticky-footer"><i class="fa fa-phone"></i><br>CONTACT US</a></li>
+  <li><a href="#sticky-footer"><i class='fas fa-info-circle'></i><br>ABOUT US</a></li>
+  <li>&nbsp;<div id="clock" class="myclock" onload="myfunc()">
+    
+  </div></li>
+</ul>
+<img src="https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" height="600px" width="100%">
+
+<div class="main">
+  
+  
+  <a href="finalcalc.html" target="_blank">
+<button id="button1">
+
+  <p style="font-family:sofia; "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjlUb8LSfgr_C0EnHLZBDYc2eoBYtjbBmBzA&usqp=CAU" id="b1" >
+  CALCULATOR</p>
+
+</button>
+</a>
+ <a href="bmi.html" target="_blank">
+<button id="button2">
+
+  <p style="font-family:sofia; "><img src="data:image/png;base64,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" width="150px" height="150px"border-radius="30px" id="b2">
+  CALCULATOR</p>
+
+</button>
+</a>
+ <a href="rps.html" target="_blank">
+<button  id="button3">
+
+  <p style="font-family:sofia; "><img src="https://static.vecteezy.com/system/resources/previews/000/691/500/original/rock-paper-scissors-vector-icons.jpg" width="150px" height="150px"border-radius="30px" id="b3">
+  CALCULATOR</p>
+
+</button>
+</a>
+</div>
+
+  
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Chitkara Developers </small><br>
+      <i style="font-size:24px" class="fa">&#xf230;</i>
+      <i style="font-size:24px" class="fa">&#xf09b;</i>
+      <i style="font-size:24px" class="fa">&#xf16d;</i><br>
+      <small>Contact Us:9039348653</small>
+    </div>
+  </footer>
+
+<script>
+  function myfunc(){
+    var d=new Date();
+    var h=d.getHours();
+    var m=d.getMinutes();
+    var s=d.getSeconds();
+    var str="AM"
+    var day=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
+    if(m<10)
+    {
+      m="0"+m;
+    }
+    if (s<10) {
+      s="0"+s;
+    }
+    if(h>12)
+    {
+      h-=12;
+      str="PM"
+
+    }
+    if(h<10)
+    {
+      h="0"+h;
+    }
+    
+    document.getElementById("clock").innerHTML=h+":"+m+":"+s+" "+str+"<br>"+day[d.getDay()];
+    setTimeout(myfunc,1000);
+
+  }
+  myfunc();
+</script>
+</script>
+</body>
+</html>

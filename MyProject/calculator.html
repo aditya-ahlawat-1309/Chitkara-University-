@@ -1,0 +1,193 @@
+
+<html>
+<head>
+  <title>project</title>
+<style>
+  body{
+    overflow-x: scroll;
+    
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:rgb(27, 28, 0);
+  height:15%; 
+  width:100%;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  align-content:
+}
+
+li a:hover {
+  
+  text-decoration: underline;
+  background-color: red;
+}
+.sugg{
+  background-color: #DEB887;
+  height: 55%;
+  width:20%;
+  top:140px;
+  color: white;
+  position: absolute;
+  left: 1005px;
+}
+#suggestion{
+  overflow-y: : scroll;
+}
+.main{
+  
+  height:600px;
+  width: 80%;
+  
+}
+  
+.idea{
+    position: relative;
+    left:20px;
+    top: 20px;
+    overflow-y:scroll;
+  }
+  .footer{
+
+  }
+  #sticky-footer {
+  flex-shrink: none;
+  background-color:rgb(27, 28, 0);
+  text-align:center;
+  height: 80px;
+  border-radius: 5px;
+  color: #FFD700;
+  font-size: 30px;
+}
+table,td,th,tr{
+		border-radius: 10px;
+		text-align: center;
+		border:solid black 1px;
+		color:white;
+		width: 200px;
+		height: 40px;
+		
+	}
+	table{
+		background-color: black;
+	}
+.calculator{
+	position: absolute;
+	top: 150px;
+	left:200px;
+
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<ul>
+  
+  <li><a class="active" href="main.html"><i style="font-size:24px" class="fa">&#xf015</i><br>HOME</a></li>
+  <li><a href="signin.html"><i class="fa fa-sign-in"></i><br>SIGN IN</a></li>
+  <li><a href="#contact"><i class="fa fa-phone"></i><br>CONTACT US</a></li>
+  <li><a href="#about"><i class='fas fa-info-circle'></i><br>ABOUT US</a></li>
+</ul>
+
+<div class="main">
+  <img src="https://media.istockphoto.com/photos/math-problems-picture-id470493341" height="600px" width="80%">
+  <div class="calculator">
+  	<table>
+<tr>
+	<th style="background-color: #FF8C00"><input type="button" value="C" onclick="clear()"></th>
+	<th colspan="3"><input type="text" id="ans" placeholder="0"></th>
+</tr>
+<tr>
+	<td style="background-color: #FF8C00"><input type="button" value="+" onclick="dis('+')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="1" onclick="dis('1')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="2" onclick="dis('2')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="3" onclick="dis('3')"></td>
+</tr>
+<tr>
+	<td style="background-color: #FF8C00"><input type="button" value="-" onclick="dis('-')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="4" onclick="dis('4')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="5" onclick="dis('5')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="6" onclick="dis('6')"></td>
+</tr>
+<tr>
+	<td style="background-color:#FF8C00"><input type="button" value="x" onclick="dis('*')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="7" onclick="dis('7')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="8" onclick="dis('8')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="9" onclick="dis('9')"></td>
+</tr>
+<tr>
+	<td style="background-color: #FF8C00"><input type="button" value="/" onclick="dis('/')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="." onclick="dis('.')"></td>
+	<td style="background-color: #9400D3"><input type="button" value="0" onclick="dis('0')"></td>
+	<td style="background-color: #9400D3" rowspan="2"><input type="button" value="=" onclick="solve()"></td>
+</tr>
+<tr>
+	<td style="background-color: #FF8C00"><input type="button" value="sqrt()" onclick="sqrt()"></td>
+	<td colspan="2" style="background-color:#9400D3"><input type="button" value="<-" onclick="back()"></td>
+	<td></td>
+</tr>
+</table>
+
+</div>
+</div>
+
+  <div class="sugg">
+    <div class="idea"><textarea rows="10" cols="20"  placeholder="Thoughtful ideas are valued,respected and encouraged.The purpose of this idea box is to generate general constructive ideas,suggestions and brainstorms from you."></textarea></div>
+  </div>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small><br>
+      <i style="font-size:24px" class="fa">&#xf230;</i>
+      <i style="font-size:24px" class="fa">&#xf09b;</i>
+      <i style="font-size:24px" class="fa">&#xf16d;</i>
+    </div>
+  </footer>
+
+<script>
+  function dis(val){
+        document.getElementById("ans").value+=val;
+
+	}
+	function solve(){
+		var x=document.getElementById("ans").value;
+		var y=eval(x);
+		document.getElementById("ans").value=y;
+	}
+	function sqrt(){
+		var x=document.getElementById("ans").value;
+		var y=eval(x);
+		var z=Math.sqrt(y);
+		document.getElementById("ans").value=z;
+	}
+	function clear()
+	{
+		 var z=0;
+		document.getElementById("ans").innerHTML=z;
+	}
+	function back()
+	{
+		var z=document.getElementById("ans").value;
+		if(z>0)
+		  z=Math.floor(z/10);
+		else
+			z=Math.ceil(z/10);
+		document.getElementById("ans").value=z;
+	}
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date</title>
+</head>
+<body>
+<p id="date">
+</p>
+<script>
+  var d=new Date();
+  if(d.getDay==0 || d.getDay==6)
+   document.getElementById("date").innerHTML="Enjoy the weekend";
+  else
+  	document.getElementById("date").innerHTML="Its a weekday"
+</script>
+</body>
+</html>

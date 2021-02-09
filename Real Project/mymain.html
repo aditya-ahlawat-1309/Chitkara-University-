@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <base href="http://themursea.com">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+        <title>
+                            Online Game Shopping - Themursea
+                    </title>
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap" rel="stylesheet">
+
+                    <link rel="stylesheet" href="http://themursea.com/themes/storefront/public/css/app.css?v=2.0.2">
+        
+        <link rel="shortcut icon" href="http://themursea.com/storage/media/6ImvUTaPjzQNZav6ggnlkM8wB2ndJ8IlX7pr8GFQ.png" type="image/x-icon">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Get your own code at fontawesome.com-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+    .myclock{
+    
+    position: absolute;
+    font-size: 40px;
+    color:  #FFC72C;
+    
+    
+    font-family:Times New Roman;
+     height: 60px;
+    width: 250px;
+
+  }
+
+
+.mySlides {
+  margin-top: 100px;
+
+  display:none;
+}
+</style>
+
+
+</head>
+
+
+<body
+        class="page-template ltr"
+        data-theme-color="#ff749f"
+        style="--color-primary: #ff749f;
+            --color-primary-hover: #ff4b83;
+            --color-primary-transparent: rgba(255, 116, 159, 0.8);
+            --color-primary-transparent-lite: rgba(255, 116, 159, 0.3);"
+    >
+        <div class="wrapper" id="app">
+            <section class="top-nav-wrap">
+    <div class="container">
+        <div class="top-nav">
+            <div class="row justify-content-between">
+                <div class="top-nav-left d-none d-lg-block">
+                    <span>The Mursea  || GAMES AT ONLY Rs. 999!</span>
+ </div>
+
+               <div class="top-nav-right">
+                    <ul class="list-inline top-nav-right-list">
+                        <li>
+                            <a >
+                                <i class="fas fa-phone" style="font-size:14px;"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a >
+                                <i class="material-icons" style="font-size:20px;color:#ffffff">compare_arrows</i>
+                                Compare
+                            </a>
+                        </li>
+
+                        
+                        
+                                                    <li>
+                                <a >
+                                    <i class="far fa-arrow-alt-circle-right" style="font-size:14px;"></i>
+                                    Login
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+
+
+</section> <header class="header-wrap">
+    <div class="header-wrap-inner">
+        <div class="container">
+            <div class="row flex-nowrap justify-content-between position-relative">
+                <div class="header-column-left">
+                    <div class="sidebar-menu-icon-wrap">
+                        <div class="sidebar-menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <a class="header-logo">
+                                                    <img src="http://themursea.com/storage/media/6ImvUTaPjzQNZav6ggnlkM8wB2ndJ8IlX7pr8GFQ.png" alt="logo" style="width: 139px; height: 100px;">
+                                            </a>
+                    
+                    
+                    
+                </div>
+
+               <nav class="navbar navbar-expand-sm">
+    <ul class="navbar-nav mega-menu horizontal-megamenu">
+                    <li class="nav-item">
+    <a  class="nav-link menu-item" target="_self" data-text="HOME">
+        
+        HOME
+    </a>
+
+                </li>
+                    <li class="nav-item">
+    <a  class="nav-link menu-item" target="_self" data-text="CATELOG">
+        
+        CATELOG
+    </a>
+
+                </li>
+                    <li class="nav-item">
+    <a  class="nav-link menu-item" target="_self" data-text="ABOUT US">
+        
+        ABOUT US
+    </a>
+
+                </li>
+                    <li class="nav-item">
+    <a  class="nav-link menu-item" target="_self" data-text="BLOG">
+        
+        BLOG
+    </a>
+
+                </li>
+                    <li class="nav-item">
+    <a class="nav-link menu-item" target="_self" data-text="CONTACT US">
+        
+        CONTACT US
+    </a>
+
+                </li>
+            </ul>
+</nav>
+
+                
+
+                <div class="header-column-right d-flex">
+                    
+                    
+                   <a  class="header-wishlist">
+                        <div class="icon-wrap">
+                            <i class="fa fa-heart-o" style="font-size:28px"></i>
+                            <div class="count" v-text="wishlistCount"></div>
+                        </div>
+
+                        <span>Favorites</span>
+                    </a>
+                    
+                    
+
+                    <div class="header-cart">
+                        <div class="icon-wrap">
+                            <i class="fa fa-cart-plus"></i>
+                            <div class="count" v-text="cart.quantity"></div>
+                        </div>
+
+                        <span v-html="cart.subTotal.inCurrentCurrency.formatted"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+            <section class="navigation-wrap">
+    <div class="container">
+        <div class="navigation-inner">
+            
+            <span class="navigation-text">
+                
+            </span>
+        </div>
+    </div>
+</section>
+
+<div id="clock" class="myclock" onload="myfunc()">
+    
+  </div>
+  <div class="sugg">
+    
+<script>
+  function myfunc(){
+    var d=new Date();
+    var h=d.getHours();
+    var m=d.getMinutes();
+    var s=d.getSeconds();
+    var str="AM"
+    var day=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
+    if(m<10)
+    {
+      m="0"+m;
+    }
+    if (s<10) {
+      s="0"+s;
+    }
+    if(h>12)
+    {
+      h-=12;
+      str="PM"
+
+    }
+    if(h<10)
+    {
+      h="0"+h;
+    }
+    
+    document.getElementById("clock").innerHTML=h+":"+m+":"+s+" "+str;
+    setTimeout(myfunc,1000);
+
+  }
+  myfunc();
+</script>
+
+
+<div class="w3-content w3-display-container">
+
+
+  <p><img class="mySlides" src="https://images5.alphacoders.com/382/382771.jpg" width="100%" height="400px" alt="">
+<a href="dic.html" target="_blank" >Play with Dice</a></p>
+
+
+
+
+  
+  <img class="mySlides" src="https://c8.alamy.com/comp/F0C165/paris-france-inside-luxury-brands-store-gucci-womens-clothing-accessories-F0C165.jpg" style="width:100%">
+  <img class="mySlides" src="https://media.karousell.com/media/photos/products/2020/4/23/luxury_brand_boxes_1587609668_568177d5_progressive.jpg" style="width:100%">
+  <img class="mySlides" src="https://ceoworld.biz/wp-content/uploads/2020/05/gucci-1.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>

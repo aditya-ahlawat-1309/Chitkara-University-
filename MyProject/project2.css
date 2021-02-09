@@ -1,0 +1,107 @@
+
+@media screen and (min-width: 801px){
+header.jumbotron {
+	background-color: #800080;
+	color : #fff;
+}
+
+#task-one header {
+	margin-left: 25px;
+}
+
+div.task {
+	
+	margin-left: 100px;
+}
+
+#task-two {
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+#task-two p {
+	margin-right: 700px;
+}
+
+#task-two-hr {
+	margin-top: 120px;
+}
+
+#task-two-one {
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+#task-two-one p {
+	margin-right: 205px;
+}
+
+footer {
+	background-color: #800080;
+	margin-top: 80px;
+	color: #000;
+}
+
+body {
+	padding: 50px 0px 0px 0px;
+	z-index: 0;
+}
+
+.navbar-dark {
+	background-color: #512DA8;
+}
+
+}
+
+@media screen and ( max-width: 800px){
+	
+	header.jumbotron {
+	background-color: #800080;
+	color : #fff;
+	margin-top: 25px;
+}
+
+#task-one header {
+	margin-left: 25px;
+}
+
+div.task {
+	
+	margin:0;
+}
+
+#task-two {
+	margin-left: 0px;
+	margin-right: 0px;
+    margin-top: 70px;
+}
+
+#task-two p {
+	margin:0;
+	padding: 0px;
+}
+
+#task-two-one {
+    margin-left:5px;
+    margin-right:5px;
+    padding: 0px;
+    
+}
+
+
+
+footer {
+	background-color: #800080;
+	margin-top: 80px;
+	color: #000;
+}
+
+body {
+    padding: 0px 0px 0px 0px;
+  
+}
+
+.navbar-dark {
+    background-color: #512DA8;
+}
+}

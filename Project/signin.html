@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The New York Times</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="sourceApp" content="nyt-lire" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="et2Host" content="https://a.et.nytimes.com/" />
+
+    <style>
+        @font-face {
+            font-family: nyt-franklin;
+            src: url(//typeface.nyt.com/fonts/nyt-franklin-300-normal.woff)
+            format('woff');
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: nyt-franklin;
+            src: url(//typeface.nyt.com/fonts/nyt-franklin-500-normal.woff)
+            format('woff');
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+            font-size: 16px;
+            font-family: 'nyt-franklin', arial, helvetica, sans-serif;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.embedded {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .full-page {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 0 0 auto;
+            height: 100%;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+if ('5F35800FA2155BC5833193CFCB9E4D') {
+    !function (a, b, c, d, e, f) {
+        a.ddjskey = e;
+        a.ddoptions = f || null;
+        var m = b.createElement(c), n = b.getElementsByTagName(c)[0];
+        m.async = 1, m.src = d, n.parentNode.insertBefore(m, n);
+    }(window, document, "script", "https://dd.nytimes.com/tags.js", '5F35800FA2155BC5833193CFCB9E4D', {
+       ajaxListenerPath: "nytimes.com/svc/lire_ui/",
+       endpoint: "https://dd.nytimes.com/js/",
+    });
+}
+</script>
+
+<script src="/lire_ui/js/common/abra/index.js"></script>
+<script type="text/javascript" src="/lire_ui/js/unified-lire.bundle.js?v&#x3D;5b306eb"></script>
+</body>
+</html>

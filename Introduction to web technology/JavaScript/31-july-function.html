@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Form
+        </title>
+    </head>
+
+    <body>
+        <form>
+
+            First Name&nbsp<input id="first" type="text" onfocus="f()"> 
+            <br>
+            <br>
+            Last Name&nbsp<input type="text" onblur="lost()"> 
+            <br>
+            <br>
+            <input type="submit" onclick="sub()">
+
+        </form>
+
+        <script>
+            function sub() {
+                alert('You have submitted successfully');
+            }
+
+            function f() {
+                document.getElementById("first").style.backgroundColor = "skyblue";
+            }
+
+            function lost() {
+                alert('Nothing');
+            }
+        </script>
+    </body>
+
+</html>

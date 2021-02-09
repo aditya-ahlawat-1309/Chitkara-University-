@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+<style type="text/css">
+	body{
+		background-color: 	#0abab5;
+
+	}
+
+	#h1{
+		background-color: #FFFFFF;
+		text-align: center;
+		margin-top: 0px;
+		height: 50px;
+	}
+
+	.form1{
+		padding-left: 200px;
+	}
+	.p{
+		float: left;
+	}
+	#form2{
+		padding-left: 250px;
+	}
+	div.scroll {
+  background-color: yellow;
+  width: 110px;
+  height: 110px;
+  overflow: scroll;
+  margin-left: 200px;
+}
+</style>
+</head>
+<body>
+
+	<h2 id="h1">The World of Fruit</h2><br>
+	<h2>Fruit Survey</h2><br>
+	<form action="#" class="form1" id="form2">
+
+		<input type="text" placeholder="Search.." name="search">
+
+		<br><br>
+		Name:
+		<input type="text"><br><br>
+		Address:
+		<input type="text"><br><br>
+			E-mail:
+		<input type="text"><br><br>
+
+
+		<label for="start">D.O.B:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2000-01-01" max="2100-12-31">
+       <br><br>
+
+
+			<p class = "p">How many pieces of fruit<br> do you eat per day ?</p><br><br>
+
+<div class="form1">	
+<input type="radio">
+<label>0</label><br><br>
+<input type="radio">
+<label>1</label><br><br>
+<input type="radio">
+<label>2</label><br><br>
+<input type="radio">
+<label>3</label><br><br>
+	</div>
+
+
+	My Favourite Fruit
+	<div class="scroll" >Apple<br>banana<br>orange<br>plum<br>pomegrante<br>guava<br>lorem<br>ipsum<br>dollar<br>pound</div><br><br>
+    </div>
+<p>Would you like to have a <br>brouchure ?
+<input type="checkbox">
+</p>
+	<br><br>
+	
+
+	<label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select><br>
+<br>
+
+<label for="age">Enter an age:</label>
+  <input type="number" id="age" name="age" placeholder="25" min="25"
+max="35" pattern="[25-30]{2}"><br><br>
+
+  <label for="points">Points (between 0 and 10):</label>
+<input type="range" id="points" name="points" min="0" max="10">
+<br><br>
+
+
+<input type="submit">
+
+	</form>
+</body>
+</html>

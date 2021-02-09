@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>project</title>
+<style>
+  body{
+    overflow-x: scroll;
+    
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:rgb(27, 28, 0);
+  height:15%; 
+  width:100%;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  align-content:
+}
+
+li a:hover {
+  
+  text-decoration: underline;
+  background-color: red;
+}
+.sugg{
+  background-color: #DEB887;
+  height: 55%;
+  width:20%;
+  top:140px;
+  color: white;
+  position: absolute;
+  left: 1005px;
+}
+#suggestion{
+  overflow-y: : scroll;
+}
+.main{
+  
+  height:600px;
+  width: 80%;
+  
+}
+.dice{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 270px;
+    left:80px;
+
+
+
+
+   
+  }
+  #di{
+    float: top;
+  }
+  .myclock{
+    background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    position: absolute;
+    font-size: 40px;
+    color:#FFD700;
+    top:54px;
+    left: 1005px;
+    font-family:Times New Roman;
+     height: 60px;
+    width: 250px;
+
+  }
+  .idea{
+    position: relative;
+    left:20px;
+    top: 20px;
+    overflow-y:scroll;
+  }
+  .footer{
+
+  }
+  #sticky-footer {
+  flex-shrink: none;
+  background-color:rgb(27, 28, 0);
+  text-align:center;
+  height: 80px;
+  border-radius: 5px;
+  color: #FFD700;
+  font-size: 30px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<ul>
+  
+  <li><a class="active" href="main.html"><i style="font-size:24px" class="fa">&#xf015</i><br>HOME</a></li>
+  <li><a href="signin.html"><i class="fa fa-sign-in"></i><br>SIGN IN</a></li>
+  <li><a href="#contact"><i class="fa fa-phone"></i><br>CONTACT US</a></li>
+  <li><a href="#about"><i class='fas fa-info-circle'></i><br>ABOUT US</a></li>
+</ul>
+
+<div class="main">
+  <img src="https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" height="600px" width="80%">
+  <div class="dice">
+  <a href="dic.html" target="_blank">
+<button style="border-radius: 10px">
+
+  <p><img src="https://images.pexels.com/photos/220301/pexels-photo-220301.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" width="150px" height="150px" alt="">
+  Play with dice</p>
+
+</button>
+</a>
+</div>
+</div>
+<div id="clock" class="myclock" onload="myfunc()">
+    
+  </div>
+  <div class="sugg">
+    <div class="idea"><textarea rows="10" cols="20"  placeholder="Thoughtful ideas are valued,respected and encouraged.The purpose of this idea box is to generate general constructive ideas,suggestions and brainstorms from you."></textarea></div>
+  </div>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small><br>
+      <i style="font-size:24px" class="fa">&#xf230;</i>
+      <i style="font-size:24px" class="fa">&#xf09b;</i>
+      <i style="font-size:24px" class="fa">&#xf16d;</i>
+    </div>
+  </footer>
+
+<script>
+  function myfunc(){
+    var d=new Date();
+    var h=d.getHours();
+    var m=d.getMinutes();
+    var s=d.getSeconds();
+    var str="AM"
+    var day=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
+    if(m<10)
+    {
+      m="0"+m;
+    }
+    if (s<10) {
+      s="0"+s;
+    }
+    if(h>12)
+    {
+      h-=12;
+      str="PM"
+
+    }
+    if(h<10)
+    {
+      h="0"+h;
+    }
+    
+    document.getElementById("clock").innerHTML=h+":"+m+":"+s+" "+str;
+    setTimeout(myfunc,1000);
+
+  }
+  myfunc();
+</script>
+</script>
+</body>
+</html>

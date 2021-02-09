@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+<style type="text/css">
+	body{
+		background-color: 	#0abab5;
+
+	}
+
+	#h1{
+		background-color: #FFFFFF;
+		text-align: center;
+		/*margin-top: 0px;*/
+		height: 50px;
+	}
+
+	.form1{
+		/*padding-left: 200px;*/
+	}
+	.p{
+		float: left;
+	}
+	#form2{
+		/*padding-left: 250px;*/
+	}
+
+	#table{
+
+		background-color: pink;
+       border-collapse: collapse;
+       /*margin-top: 50px;*/
+       width: 20%;
+	}
+
+	div.scroll {
+  background-color: yellow;
+  width: 110px;
+  height: 110px;
+  overflow: scroll;
+  /*margin-left: 200px;*/
+}
+</style>
+</head>
+<body>
+
+	<h2 id="h1">The World of Fruit</h2><br>
+	<h2>Fruit Survey</h2><br>
+	<table id="table">
+	<form action="#" class="form1" id="form2">
+
+		
+		<tr>
+			<td>
+		Your Name:</td>
+		<td><input type="text"></td><br><br>
+	</td>
+</tr>
+<tr>
+	<td>
+		Password:</td>
+	    <td><input type="text"></td><br><br>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    E-mail:</td>
+		<td><input type="text"></td><br><br>
+        </td>
+        </tr>
+
+		<tr><td><label for="start">D.O.B:</label></td>
+<td>
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2000-01-01" max="2100-12-31">
+       </td></tr>
+       
+
+<tr>
+	<td>
+			<p class = "p">You are ?</p>
+</td>
+</tr>
+
+<tr>
+	<td>
+	
+<input type="radio"></td>
+<td>
+<label>male</label></td>
+</td></tr>
+<tr>
+<td><input type="radio"></td>
+<td>
+<label>Female</label>
+</td></tr>
+	
+	<br>
+	<br>
+	
+<tr><td><label for="cars">Choose a car:</label>
+</td>
+<td>
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select><br>
+<br>
+</td>
+</tr>
+<tr align="center">
+	<td colspan="2">
+<input type="submit">
+</td>
+</tr>
+
+</form>
+</table>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>project</title>
+<style>
+  body{
+    overflow-y:scroll;
+    
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height:15%; 
+  width:100%;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display: block;
+  color:yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  
+  text-decoration: underline;
+  background-color: red;
+}
+.sugg{
+  background-color: #DEB887;
+  height: 55%;
+  width:20%;
+  top:140px;
+  color: white;
+  position: absolute;
+  left: 1005px;
+}
+#suggestion{
+  overflow-y: : scroll;
+}
+.main{
+  
+  height:600px;
+  width: 80%;
+  
+}
+.dice{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 270px;
+    left:80px;
+
+
+
+
+   
+  }
+  #di{
+    float: top;
+  }
+  .myclock{
+    background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    position: absolute;
+    font-size: 40px;
+    color:#FFE4C4;
+    top:54px;
+    left: 1005px;
+    font-family:Times New Roman;
+     height: 60px;
+    width: 250px;
+
+  }
+  .idea{
+    position: relative;
+    left:20px;
+    top: 20px;
+    overflow-y:scroll;
+  }
+  .footer{
+
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  
+  <li><a class="active" href="main.html">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="main">
+  <img src="https://cellphonemedics210.com/wp-content/uploads/2018/11/full-hd-background-wallpaper-download.jpg" height="00px" width="80%">
+  <div class="dice">
+  <a href="dic.html" target="_blank">
+<button style="border-radius: 10px">
+
+  <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX/AAAAAADVAADYAADvAADeAACSAABAAACuAAAgAADGAABxAAD6AAAxAACzAAAEAAATAAAh2pR4AAACEklEQVR4nO3cDU6DQBBAYZbtv7Xt/U+rVWNErSUxM80b3rvA8IVQWLZhaNUbHn0A4Snkp5Dfh/DUx2r100TYh3r1iXB89OEENCrEp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5CfQn4K+Snkp5DfY4Sr9bheJc3KF/bN9n1Y224yvp6WLdzt29f2u/CJucLDuX3vfAiemSp8+uG79hQ7NFF4fP4V2NrzMXJsnvB4uQFs7RJJzBPeOoNvZzFwbprw92sw4VrMEh7+BLYW94uaJfx5m5h2DpucJNzdAbYWdutPEu5v0z7aR43OEfa7wLgv/OYINzOEm6DZOcLtbdhn26DZOcIZwNdjiClFuJolDFoSpwjXs4TrmOEpwnGWMHa45/B/1b8O6/+WLuB+WP+Zpv5zaf21xQLWh/XX+At4T1P/XdsC3pcu4J13/X2Lof7e07CA/cOh/h7wter7+O/V/i9Gdgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeSnkJ9Cfgr5KeQ3FWZ8XSy7PhGe+litfpoIC6eQn0J+9YUv7fki+pTnTu0AAAAASUVORK5CYII=" width="150px" height="150px" alt="">
+  Play with dice</p>
+
+</button>
+</a>
+</div>
+</div>
+<div id="clock" class="myclock" onload="myfunc()">
+    
+  </div>
+  <div class="sugg">
+    <div class="idea"><textarea rows="10" cols="20"  placeholder="Thoughtful ideas are valued,respected and encouraged.The purpose of this idea box is to generate general constructive ideas,suggestions and brainstorms from you."></textarea></div>
+  </div>
+<script>
+  function myfunc(){
+    var d=new Date();
+    var h=d.getHours();
+    var m=d.getMinutes();
+    var s=d.getSeconds();
+    var str="AM"
+    var day=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"]
+    if(m<10)
+    {
+      m="0"+m;
+    }
+    if (s<10) {
+      s="0"+s;
+    }
+    if(h>12)
+    {
+      h-=12;
+      str="PM"
+
+    }
+    if(h<10)
+    {
+      h="0"+h;
+    }
+    
+    document.getElementById("clock").innerHTML=h+":"+m+":"+s+" "+str;
+    setTimeout(myfunc,1000);
+
+  }
+  myfunc();
+</script>
+
+</body>
+</html>
